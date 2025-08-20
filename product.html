@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Limited Reps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="global-video" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="auto" poster="" id="bgVideo">
+            <source src="videoplayback (1).mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="brand-badge">LIMITED REPS</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link active">Explore Products</a></li>
+                <li class="nav-item"><a href="https://vonionnagoo.github.io/website/" class="nav-link" target="_blank" rel="noopener">View More Options</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Send Message</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products-header">
+        <div class="container">
+            <h1 id="productTitle">Product</h1>
+            <p id="productSubtitle">Premium quality, multiple sizes and colors available</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="product-detail" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;background:rgba(17,17,17,0.7);padding:2rem;border-radius:20px;border:1px solid rgba(255,255,255,0.08)">
+                <div class="product-image" style="height:420px;border-radius:12px;overflow:hidden">
+                    <img id="productImage" src="" alt="" style="width:100%;height:100%;object-fit:cover" />
+                </div>
+                <div>
+                    <h2 id="modelName" style="margin-bottom:1rem"></h2>
+                    <p id="productSummary" style="color:#ccc;margin-bottom:1rem"></p>
+                    <div style="margin:1rem 0">
+                        <strong>Price:</strong> <span id="productPrice" class="price"></span>
+                    </div>
+                    <div style="margin:1rem 0">
+                        <strong>Available Sizes:</strong>
+                        <div id="sizeOptions" style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem"></div>
+                    </div>
+                    <div style="margin:1rem 0">
+                        <strong>Available Colors:</strong>
+                        <div id="colorOptions" style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem"></div>
+                    </div>
+                    <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+                        <a href="contact.html" class="btn btn-primary">Order via WhatsApp</a>
+                        <a href="products.html" class="btn btn-secondary">Back to Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Limited Reps</h3>
+                    <p>Premium quality reps for the discerning customer</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <p>Email: limitedrepsbusiness@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Limited Reps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    const PRODUCT_DATA = {
+        'air-jordan-1-low': {
+            name: 'Air Jordan 1 Low', price: 120, image: 'images/air-jordan-1-low.png',
+            summary: 'Classic low-top silhouette with premium materials for everyday wear.',
+            sizes: ['6','7','8','9','10','11','12'],
+            colors: ['Black/White','University Red','Royal Blue']
+        },
+        'air-jordan-1-mid': {
+            name: 'Air Jordan 1 Mid', price: 120, image: 'images/air-jordan-1-mid.png',
+            summary: 'Mid-cut AJ1 blending heritage style with modern comfort.',
+            sizes: ['6','7','8','9','10','11','12'],
+            colors: ['Bred','Shadow','Panda']
+        },
+        'air-jordan-1-high': {
+            name: 'Air Jordan 1 High', price: 150, image: 'images/air-jordan-1-high.png',
+            summary: 'Iconic high-cut profile favored on and off the court.',
+            sizes: ['6','7','8','9','10','11','12'], colors: ['Chicago','Royal','Black/White']
+        },
+        'air-jordan-3': { name:'Air Jordan 3', price:150, image:'images/air jordan 3.png',
+            summary: 'Signature elephant print overlays and visible Air cushioning.',
+            sizes:['6','7','8','9','10','11','12'], colors:['White Cement','Black Cement','Fire Red'] },
+        'air-jordan-4': { name:'Air Jordan 4', price:150, image:'images/air_jordan_4.png',
+            summary:'Mesh paneling and supportive wings for a timeless retro look.',
+            sizes:['6','7','8','9','10','11','12'], colors:['Bred','Military Blue','Fire Red'] },
+        'air-jordan-11': { name:'Air Jordan 11', price:160, image:'images/air_jordan_11.png',
+            summary:'Patent leather shine and plush cushioning for elevated style.',
+            sizes:['6','7','8','9','10','11','12'], colors:['Concord','Bred','Cool Grey'] },
+        'sb-dunk': { name:'SB Dunk', price:120, image:'images/sb dunk.png',
+            summary:'Skate-ready cushioning with bold colorblocking.', sizes:['6','7','8','9','10','11','12'],
+            colors:['Panda','Blue/White','Gum'] },
+        'air-force-1': { name:'Air Force 1', price:120, image:'images/air_force_1.png',
+            summary:'Legendary AF1 comfort with crisp leather upper.', sizes:['6','7','8','9','10','11','12'],
+            colors:['Triple White','Black','White/Grey'] },
+        'air-max': { name:'Air Max', price:120, image:'images/air_max.png',
+            summary:'Visible Air cushioning and breathable mesh uppers.', sizes:['6','7','8','9','10','11','12'],
+            colors:['Infrared','Black/White','Navy'] },
+        'dunk-high': { name:'Dunk High', price:110, image:'images/dunk high.png',
+            summary:'High-cut Dunk with padded collar and classic panels.', sizes:['6','7','8','9','10','11','12'],
+            colors:['Black/White','Green/White','Sail'] },
+        'blazer': { name:'Blazer', price:100, image:'images/blazer.png',
+            summary:'Vintage hoops style with durable suede/leather mix.', sizes:['6','7','8','9','10','11','12'],
+            colors:['White/Black','Sail','Grey'] },
+        'vapormax': { name:'VaporMax', price:140, image:'images/vapor max.png',
+            summary:'Full-length Nike Air pods for a bouncy stride.', sizes:['6','7','8','9','10','11','12'],
+            colors:['Black','Grey','Volt'] },
+        'ultra-boost': { name:'Ultra Boost', price:120, image:'images/ultra boost.png',
+            summary:'Boost cushioning and Primeknit comfort all day.', sizes:['6','7','8','9','10','11','12'],
+            colors:['Core Black','Triple White','Grey'] },
+        'samba': { name:'Samba', price:120, image:'images/samba.png', summary:'Timeless terrace classic with gum sole.',
+            sizes:['6','7','8','9','10','11','12'], colors:['Black','White','Green'] },
+        'stan-smith': { name:'Stan Smith', price:100, image:'images/stan smith.png', summary:'Minimal tennis icon with perforated 3-Stripes.',
+            sizes:['6','7','8','9','10','11','12'], colors:['White/Green','White/Navy','White/Red'] },
+        'gazelle': { name:'Gazelle', price:110, image:'images/gazelle.png', summary:'Low-profile suede sneaker with classic styling.',
+            sizes:['6','7','8','9','10','11','12'], colors:['Green','Black','Burgundy'] },
+        'superstar': { name:'Superstar', price:100, image:'images/super star.png', summary:'Shell-toe legend with leather upper.',
+            sizes:['6','7','8','9','10','11','12'], colors:['White/Black','White/Red','Black/White'] },
+        'nmd': { name:'NMD', price:130, image:'images/nmd.png', summary:'Modern city runner with Boost comfort.', sizes:['6','7','8','9','10','11','12'], colors:['Black','Grey','Blue'] },
+        'yeezy-350': { name:'Yeezy 350', price:150, image:'images/yeezy 350.png', summary:'Primeknit upper and responsive cushioning.', sizes:['6','7','8','9','10','11','12'], colors:['Zebra','Static','Black'] },
+        'yeezy-700': { name:'Yeezy 700', price:160, image:'images/yeezy 700.png', summary:'Chunky silhouette with layered upper.', sizes:['6','7','8','9','10','11','12'], colors:['Wave Runner','Inertia','Utility Black'] },
+        'yeezy-500': { name:'Yeezy 500', price:140, image:'images/yeezy 500.png', summary:'Bulky Adiprene cushioning and suede overlays.', sizes:['6','7','8','9','10','11','12'], colors:['Bone','Utility Black','Soft Vision'] },
+        'yeezy-slide': { name:'Yeezy Slide', price:80, image:'images/yeezy slide.png', summary:'Minimal EVA slide for cushioned comfort.', sizes:['6','7','8','9','10','11','12'], colors:['Bone','Onyx','Resin'] },
+        '574': { name:'New Balance 574', price:100, image:'images/574.png', summary:'Everyday NB classic with ENCAP cushioning.', sizes:['6','7','8','9','10','11','12'], colors:['Grey','Navy','Black'] },
+        '990': { name:'New Balance 990', price:120, image:'images/990.png', summary:'Made in USA heritage runner with premium suede.', sizes:['6','7','8','9','10','11','12'], colors:['Grey','Black','Navy'] },
+        '327': { name:'New Balance 327', price:110, image:'images/327.png', summary:'Retro-inspired runner with oversized N logo.', sizes:['6','7','8','9','10','11','12'], colors:['Green','Blue','Black'] },
+        '2002r': { name:'New Balance 2002R', price:130, image:'images/2002R.png', summary:'Modern comfort with ABZORB cushioning.', sizes:['6','7','8','9','10','11','12'], colors:['Grey','Black','Navy'] },
+
+        // Clothes
+        'luxury-down-jacket': { name:'Luxury Down Jacket', price:299, image:'images/Luxury Jacket.png', summary:'Premium insulated down jacket with luxury finish and weather resistance.', sizes:['S','M','L','XL','XXL'], colors:['Black','Navy','Olive'] },
+        'designer-t-shirt': { name:'Designer T-Shirt', price:89, image:'images/Designer T-shirt.png', summary:'Soft premium cotton tee with designer fit and logo detailing.', sizes:['S','M','L','XL','XXL'], colors:['White','Black','Heather Grey'] },
+        'premium-track-suit': { name:'Premium Track Suit', price:199, image:'images/Track Suit.png', summary:'Two-piece track set with breathable fabric and tailored comfort.', sizes:['S','M','L','XL','XXL'], colors:['Black','Navy','Grey'] },
+        'luxury-hoodie': { name:'Luxury Hoodie', price:159, image:'images/Hoodie.png', summary:'Heavyweight fleece hoodie with premium trims and relaxed fit.', sizes:['S','M','L','XL','XXL'], colors:['Black','Grey','Cream'] },
+
+        // Watches
+        'luxury-watch': { name:'Luxury Watch', price:899, image:'images/Luxury Accessory.png', summary:'Sophisticated timepiece with premium materials and precise movement.', sizes:['One Size'], colors:['Silver','Gold','Black'] },
+        'sport-watch': { name:'Sport Watch', price:599, image:'images/Sport Accessory.png', summary:'Durable sport watch designed for performance and daily wear.', sizes:['One Size'], colors:['Black','Navy','Olive'] },
+        'classic-watch': { name:'Classic Watch', price:799, image:'images/Classic Accessory.png', summary:'Timeless design with clean dial and comfortable strap.', sizes:['One Size'], colors:['Brown/Gold','Black/Silver','Black/Gold'] },
+        'elegant-watch': { name:'Elegant Watch', price:699, image:'images/Elegant Accessory.png', summary:'Refined dress watch for formal occasions and everyday elegance.', sizes:['One Size'], colors:['Silver','Gold','Rose Gold'] },
+
+        // Bags
+        'luxury-handbag': { name:'Luxury Handbag', price:599, image:'images/Luxury Bag.webp', summary:'Premium leather handbag with refined hardware and spacious interior.', sizes:['One Size'], colors:['Black','Brown','Beige'] },
+        'designer-bag': { name:'Designer Bag', price:499, image:'images/Designer Bag.webp', summary:'Statement designer bag crafted with high-quality materials.', sizes:['One Size'], colors:['Black','Cream','Monogram'] },
+        'premium-backpack': { name:'Premium Backpack', price:299, image:'images/Backpack.webp', summary:'Everyday backpack with padded compartments and durable build.', sizes:['One Size'], colors:['Black','Grey','Navy'] },
+        'luxury-wallet': { name:'Luxury Wallet', price:199, image:'images/wallet.png', summary:'Compact wallet with premium leather and multiple card slots.', sizes:['One Size'], colors:['Black','Brown','Navy'] },
+
+        // Accessories
+        'designer-sunglasses': { name:'Designer Sunglasses', price:299, image:'images/Sunglasses.png', summary:'UV-protected lenses in a premium designer frame.', sizes:['One Size'], colors:['Black','Tortoise','Silver'] },
+        'luxury-belt': { name:'Luxury Belt', price:199, image:'images/Belt.png', summary:'Premium leather belt with signature buckle hardware.', sizes:['S','M','L','XL'], colors:['Black','Brown','Tan'] },
+        'premium-hat': { name:'Premium Hat', price:89, image:'images/Hat.png', summary:'Comfortable cap with structured crown and adjustable strap.', sizes:['One Size'], colors:['Black','Beige','Navy'] },
+        'luxury-scarf': { name:'Luxury Scarf', price:129, image:'images/Scarf.png', summary:'Soft woven scarf for warmth and elevated styling.', sizes:['One Size'], colors:['Grey','Black','Camel'] },
+
+        // Jewelry
+        'luxury-necklace': { name:'Luxury Necklace', price:399, image:'images/Necklace.png', summary:'Elegant necklace with premium finish for refined looks.', sizes:['One Size'], colors:['Gold','Silver','Rose Gold'] },
+        'designer-ring': { name:'Designer Ring', price:299, image:'images/Ring.png', summary:'Designer ring crafted with attention to detail.', sizes:['6','7','8','9','10'], colors:['Gold','Silver','Black'] },
+        'premium-bracelet': { name:'Premium Bracelet', price:199, image:'images/Bracelet.png', summary:'Sleek bracelet built for daily wear and special occasions.', sizes:['S','M','L'], colors:['Gold','Silver','Black'] },
+        'luxury-earrings': { name:'Luxury Earrings', price:159, image:'images/Earrings.png', summary:'Refined earrings with a polished finish.', sizes:['One Size'], colors:['Gold','Silver','Rose Gold'] }
+    };
+
+    function getParam(name){
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+    }
+
+    function render(product){
+        const title = document.getElementById('productTitle');
+        const subtitle = document.getElementById('productSubtitle');
+        const img = document.getElementById('productImage');
+        const modelName = document.getElementById('modelName');
+        const summary = document.getElementById('productSummary');
+        const price = document.getElementById('productPrice');
+        const sizes = document.getElementById('sizeOptions');
+        const colors = document.getElementById('colorOptions');
+
+        title.textContent = product.name;
+        modelName.textContent = product.name;
+        subtitle.textContent = 'Premium Replica • Multiple sizes and colors available';
+        img.src = product.image;
+        img.alt = product.name;
+        summary.textContent = product.summary;
+        price.textContent = `$${product.price}`;
+
+        sizes.innerHTML = '';
+        product.sizes.forEach(s => {
+            const el = document.createElement('span');
+            el.textContent = s;
+            el.style.cssText = 'padding:.5rem .8rem;border:1px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;';
+            sizes.appendChild(el);
+        });
+
+        colors.innerHTML = '';
+        product.colors.forEach(c => {
+            const el = document.createElement('span');
+            el.textContent = c;
+            el.style.cssText = 'padding:.5rem .8rem;border:1px solid rgba(255,255,255,.2);border-radius:8px;color:#fff;';
+            colors.appendChild(el);
+        });
+    }
+
+    const slug = getParam('model');
+    if (slug && PRODUCT_DATA[slug]) {
+        render(PRODUCT_DATA[slug]);
+    } else {
+        // fallback: try to normalize common names
+        const normalized = (slug || 'air-force-1').toLowerCase().replace(/\s+/g,'-');
+        const found = PRODUCT_DATA[normalized] || PRODUCT_DATA['air-force-1'];
+        render(found);
+    }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

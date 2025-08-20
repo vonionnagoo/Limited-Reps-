@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message - Limited Reps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+                        <div class="nav-logo">
+  <span class="brand-badge">LIMITED REPS</span>
+</div>
+
+    <style>
+    .brand-badge {
+    border: 2px solid yellow;   /* yellow border */
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 6px;         /* optional rounded edges */
+    font-weight: bold;
+    color: #fff;                /* white text */
+    }
+    </style>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">Explore Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://vonionnagoo.github.io/website/" class="nav-link" target="_blank" rel="noopener">View Full Products Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Send Message</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>Fill out the form below and we'll get back to you as soon as possible</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>Available 24/7 for quick responses</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>limitedrepsbusiness@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Response Time</h3>
+                            <p>We typically respond within 2-4 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        
+                        <!-- Personal Information -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <!-- Address Information -->
+                        <div class="form-group">
+                            <label for="address">Full Address *</label>
+                            <textarea id="address" name="address" rows="3" required placeholder="Street Address, City, State, ZIP Code, Country"></textarea>
+                        </div>
+
+                        <!-- Product Information -->
+                        <div class="form-group">
+                            <label for="productCategory">Product Category</label>
+                            <select id="productCategory" name="productCategory">
+                                <option value="">Select Category</option>
+                                <option value="shoes">Shoes</option>
+                                <option value="clothes">Clothes</option>
+                                <option value="watches">Watches</option>
+                                <option value="bags">Bags</option>
+                                <option value="accessories">Accessories</option>
+                                <option value="jewelry">Jewelry</option>
+                                <option value="sunglasses">Sunglasses</option>
+                                <option value="belts">Belts</option>
+                                <option value="wallets">Wallets</option>
+                                <option value="hats">Hats</option>
+                                <option value="scarves">Scarves</option>
+                                <option value="perfumes">Perfumes</option>
+                                <option value="other">Other (Custom Request)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productSubcategory">Product Subcategory</label>
+                            <select id="productSubcategory" name="productSubcategory">
+                                <option value="">Select Subcategory</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specificProduct">Specific Product</label>
+                            <input type="text" id="specificProduct" name="specificProduct" placeholder="e.g., Air Jordan 1 High, Gucci T-Shirt">
+                        </div>
+                        
+                        <div class="form-group" id="customProductGroup" style="display: none;">
+                            <label for="customProduct">Custom Product Request</label>
+                            <textarea id="customProduct" name="customProduct" rows="3" placeholder="Please describe the specific product you're looking for in detail..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="size">Size</label>
+                            <select id="size" name="size">
+                                <option value="">Select Size</option>
+                        
+                                <!-- Men's Sizes -->
+                                <optgroup label="Men">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                    <option value="XXXL">XXXL</option>
+                                </optgroup>
+                        
+                                <!-- Women's Sizes -->
+                                <optgroup label="Women">
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </optgroup>
+                        
+                                <!-- Kids Sizes -->
+                                <optgroup label="Kids">
+                                    <option value="2T">2T</option>
+                                    <option value="3T">3T</option>
+                                    <option value="4T">4T</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="14">14</option>
+                                    <option value="16">16</option>
+                                </optgroup>
+                        
+                                <!-- Shoe Sizes -->
+                                <optgroup label="Shoes">
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-group">
+                            <label for="additionalInfo">Additional Information</label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Any specific requirements, color preferences, or additional details..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="quality">Quality Range</label>
+                            <select id="quality" name="quality" class="form-control">
+                                <option value="">-- Select Quality --</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                            <small class="form-text text-muted">
+                                Higher quality may impact the budget.
+                            </small>
+                        </div>
+                        
+                        
+
+                        <!-- Preferred Contact Method -->
+                        <div class="form-group">
+                            <label>Preferred Contact Method</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="contactMethod" value="whatsapp" checked>
+                                    <span class="radio-custom"></span>
+                                    WhatsApp
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contactMethod" value="email">
+                                    <span class="radio-custom"></span>
+                                    Email
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fab fa-whatsapp"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Limited Reps</h3>
+                    <p>Premium quality reps for the discerning customer</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <p>Email: limitedrepsinformation@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Limited Reps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
